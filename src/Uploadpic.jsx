@@ -18,7 +18,7 @@ const Uploadpic = () => {
   return (
     <div>
     {login?
-      <form action="http://localhost:5000/api/upload" method="POST" encType='multipart/form-data' >
+      <form action="https://backened-alpha.vercel.app/api/upload" method="POST" encType='multipart/form-data' >
       <input type="file" name="pic"/>
 <button type="submit" className='bg-gray-500 rounded-md p-1 text-white'>upload</button>
       </form>
