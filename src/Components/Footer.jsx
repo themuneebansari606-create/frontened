@@ -21,7 +21,7 @@ const Footer = () => {
       <div className='w-70 h-auto  mx-5 p-5'>
            <ul className='' style={{style:'none' ,color:'gray' }} >
         <li className='text-2xl text-black my-5 font-bold '>Contact</li>
-        <li>innovativeloopline@gmail.com</li> 
+        <li>info.innovativeloopline@gmail.com</li> 
         
         </ul>
       </div>
