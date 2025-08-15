@@ -22,7 +22,7 @@ const Backgroundcom = () => {
             cursorClassName="text-blue-950"
           />
           <TextType
-            text="your vision, our creation. Explore the world of stunning visuals and innovative designs with 'INNOVATIVE LOOP LINE'."
+            text="your vision, our creation. Explore the world of stunning visuals and innovative designs with 'INNOVATIVE LOOPlINE'."
             as="p"
             className="text-lg text-blue-950 mt-4 max-w-xl"
             typingSpeed={50}
