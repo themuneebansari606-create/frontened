@@ -10,7 +10,7 @@ const Backgroundcom = () => {
         </div>
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-blue-950 text-center px-4">
         <TextType
-            text="Welcome to Innovative Loop Line"
+            text="Welcome to Innovative Loopline"
             as="h1"
             className="text-5xl font-bold mb-4"
             typingSpeed={50}
