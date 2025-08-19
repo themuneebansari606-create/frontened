@@ -11,7 +11,7 @@ import Pricing from './Pricing.jsx';
 import Footer from './Components/Footer.jsx';
 import Uploadpic from './Uploadpic.jsx';
 function App() {
-  const [users, setUsers] = useState([])
+  
   return (
     <>
    <Router>
