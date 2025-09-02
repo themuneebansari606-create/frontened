@@ -9,6 +9,7 @@ import User from './Components/User.jsx';
 import Achivement from './Components/Achivement.jsx';
 import Service from './Components/Service.jsx';
 import Choose from './Components/Choose.jsx';
+import Card from './Components/Card.jsx';
 import tiger from './assets/tigers.jpeg';
 import cartoon from './assets/cartoon.jpeg';
 import dogs from './assets/dogs.jpeg';
@@ -17,8 +18,11 @@ function Home() {
   return (
     <>
       <Backgroundcom/>
+       <Achivement  name="Our employees" />
+        <Card />
        <Achivement  name="Our achivements" />
         <User />
+
       <Achivement name="Our Services"  />
       <Service name= " Embroidey Digitizing" pic={tiger} size1="170" line="“From Sketch to Stitch — Your Vision, Our Thread.”" size2=""  />
       <Service name="Custom Digitzing" pic={cartoon} size1='150' line="“Digitizing Redefined. Art meets Accuracy.”" />

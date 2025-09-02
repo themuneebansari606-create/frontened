@@ -9,17 +9,19 @@ import axios from 'axios';
 
 const Portfolio = () => {
   const [login, setLogin] = useState(false);
+  const [load, setLoad] = useState(false);
   const [images, setImage] = useState([]);
-
+  
   // Logout function to clear localStorage and update login state
   const logout = () => {
     localStorage.clear();
     setLogin(false); // Reset login state after logout
   };
-
+  
   useEffect(() => {
-    const storedData = localStorage.getItem("data");
 
+    const storedData = localStorage.getItem("data");
+    
     // Check if stored data matches admin credentials
     if (storedData) {
       const data = JSON.parse(storedData);
@@ -30,14 +32,18 @@ const Portfolio = () => {
         setLogin(true);
       }
     }
-
-    // Fetch images from the backend
-    axios.get(`https://backened-alpha.vercel.app/api/getimage`)
-      .then(response => setImage(response.data))
-      .catch(error => console.error('Error fetching images:', error.message)); // Enhanced error logging
-  }, []);
-
-  // Handle image deletion
+    
+     const fetchingimgfunc=async()=>{
+       setLoad(true);
+    const imagefetch = await axios.get(`https://backened-alpha.vercel.app/api/getimage`)
+    .then(response => setImage(response.data))
+    .catch(error => console.error('Error fetching images:', error.message)); // Enhanced error logging
+    
+      
+      setLoad(false);}
+      fetchingimgfunc()
+    }, []);
+    // Handle image deletion
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://backened-alpha.vercel.app/api/image/${id}`);
@@ -49,6 +55,7 @@ const Portfolio = () => {
 
   return (
     <div>
+      
       <div className='w-30 m-auto'>
         {login ? <Link to="/upload"><NewButton name="Add Post" /></Link> : <span />}
         {login ? 
@@ -63,7 +70,7 @@ const Portfolio = () => {
       </div>
 
       <Achivement name="Innovative Loopline Portfolio" />
-
+        {load && <h1 className='text-center  text-blue-950 m-10 text-5xl font-bold ' >  Loading...</h1>}
       <div className='w-full flex flex-wrap justify-center'>
         {images.map(oneimage => (
           <div className='w-70 h-80 m-5' key={oneimage._id}>

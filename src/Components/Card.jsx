@@ -1,15 +1,23 @@
 import React from 'react'
-
-const Card = ({line}) => {
+import Accounts from './Accounts.jsx'; // Import the Accounts component
+import account1 from '../assets/account1.jpeg'
+import account2 from '../assets/account2.jpeg'
+import account3 from '../assets/account3.jpeg'
+const Card = () => {
   return (
-<marquee behavior="" direction="">
-      <div className='w-70 h-50 border  mx-5 flex flex-wrap' >
-                <div className='bg-gray-500 w-17 h-17 rounded-full  m-5' ></div>
-                <div className='m-5  w-60 flex h-auto' >{line}ss</div>
-            </div>
-</marquee>
-   
-   
+    <div className=' bg-gray-500 '>
+      <h1 className='p-3 font-bold text-blue-950' style={{textAlign:'center'}} >Doesn't beleive any account except these </h1>
+      <div className='w-ful h-auto  flex justify-center bg-gray-500  mx-5  flex-wrap' >
+
+        <Accounts pics={account1} />
+        <Accounts pics={account2} />
+        <Accounts pics={account3} />
+
+      </div>
+    </div>
+
+
+
   )
 }
 
