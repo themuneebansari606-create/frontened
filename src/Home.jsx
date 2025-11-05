@@ -9,7 +9,7 @@ import User from './Components/User.jsx';
 import Achivement from './Components/Achivement.jsx';
 import Service from './Components/Service.jsx';
 import Choose from './Components/Choose.jsx';
-import Card from './Components/Card.jsx';
+// import Card from './Components/Card.jsx';
 import tiger from './assets/tigers.jpeg';
 import cartoon from './assets/cartoon.jpeg';
 import dogs from './assets/dogs.jpeg';
@@ -18,8 +18,8 @@ function Home() {
   return (
     <>
       <Backgroundcom/>
-       <Achivement  name="Our employees" />
-        <Card />
+       {/* <Achivement  name="Our employees" /> */}
+       {/* <Card /> */}
        <Achivement  name="Our achivements" />
         <User />
 
